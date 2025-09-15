@@ -30,8 +30,8 @@ Standard configurationen, som hentes ved opdateringer, ligger i roden af projekt
 
 ## Udvikling
 
-Det er vide muligheder for at ændre og tilføje konfiguration som på et normalt Drupal site. Dog skal man være meget varsom med at ændre konfiguration, som DPL-CMS allerede har sat - det er bedre at tilføje ny konfiguration såsom et helt nyt view eller indholdstype.  
-Hvis man har en række konfigurationer, som danner en samlet funktion - kan det være en fordel at lave disse konfigurationer i et modul se webmaster-4-lokalt_modul.
+Der er vide muligheder for at ændre og tilføje konfiguration som på et normalt Drupal site. Dog skal man være meget varsom med at ændre konfiguration, som DPL-CMS allerede har sat - det er bedre at tilføje ny konfiguration så som et helt nyt view eller indholdstype.  
+Hvis man har en række konfigurationer, som danner en samlet funktion - kan det være en fordel at lave disse konfigurationer i et modul (se webmaster-4-lokalt_modul).
 
 ## Anbefalinger
 
@@ -46,4 +46,4 @@ Hvis man har en række konfigurationer, som danner en samlet funktion - kan det 
 
 ## Udviklingsmuligheder og afklaring
 
-Det kunne være fint med et modul, som kunne sammenligne config ignore / config ignore auto med filerne i ./config/sync, så det var muligt at se om der var noget, som man uforsætlig var kommet til at overskrive.
+Det kunne være fint med et modul, som kunne sammenligne config ignore / config ignore auto med filerne i ./config/sync, så det var muligt at se om der var noget, som man uforsætligt var kommet til at overskrive.
