@@ -1,10 +1,10 @@
 # 3 Injector
 
-Man kan bruge [Asset Injector](https://www.drupal.org/project/asset_injector) Asset Injector og [Add to Head](https://www.drupal.org/project/add_to_head) modulerne til at indsætte Javascript, Css mm. på sitet.
+Man kan bruge [Asset Injector](https://www.drupal.org/project/asset_injector) Asset Injector og [Add to Head](https://www.drupal.org/project/add_to_head) modulerne til at indsætte Javascript, CSS mm. på sitet.
 
 Asset Injector giver mulighed for at tilføje brugerdefineret CSS eller JavaScript til dit Drupal-site uden at skulle ændre i f.eks. tema eller bruge lokale moduler. Det er praktisk, hvis man hurtigt vil tilpasse udseendet eller funktionaliteten på specifikke sider eller site-wide.
 
-Add to Head modulet bruges til at tilføje scripts, styles eller meta-tags direkte til <head>-sektionen på sitet.
+Add to Head modulet bruges til at tilføje scripts, styles eller meta-tags direkte til "<head>"-sektionen på sitet.
 
 ## Installation
 
@@ -40,9 +40,9 @@ Man skal være opmærksom på "race conditions" altså hvilken kode indlæses f�
 
 Asset Injector kan bruges på mange måder, nedenfor en en række eksempler.
 
-For yderligere inspiration kan man på andre webmaster biblioteker f.eks. på herningsbib.dk åbner Dev Tools i browseren. Har kan man enten i head se links eller man kan kigger i netværks tab'en og se js/css, som bliver loaded.
+For yderligere inspiration kan man på andre webmaster biblioteker f.eks. på herningsbib.dk åbne Dev Tools i browseren. Her kan man enten i head se links eller man kan kigge i netværks tab'en og se js/css, som bliver loaded.
 
-1. Ændre indstillinger i formularer, som egentligt kan gøres i indstillinger, men vil resulterer i configuration overwrites (se webmaster-2-konfiguration). Et eksempel er at ændre "Opret billet i billetsystem" knappen til af være slået fra som default, når man opretter et arrangement.
+1. Ændre indstillinger i formularer, som egentligt kan gøres i indstillinger, men vil resultere i configuration overwrites (se webmaster-2-konfiguration). Et eksempel er at ændre "Opret billet i billetsystem" knappen til af være slået fra som default, når man opretter et arrangement.
 
 ```js
 document.addEventListener("DOMContentLoaded", function () {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 3. Tematiserere hjemmesiden f.eks. med et stille julesnevejr, skabt med en smule javascript
    https://github.com/odensebibliotekerne/odense_assetinjector_snow
 
-4. Lave styleændringer via Css
+4. Lave styleændringer via CSS
 
 Style elementer f.eks. begrænset til alle sider med mønsteret /digital/\*
 
