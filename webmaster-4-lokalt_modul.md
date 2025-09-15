@@ -49,15 +49,17 @@ https://github.com/odensebibliotekerne/webmaster_local_staff
 
 Der er ikke lavet demo indhold.
 
-2. Asset Injector kode som modul
+2. Snevejr: Asset Injector kode som modul
 
-Snevejr
+Eksemple på et modul, som indlæser JS/CSS istedet for at gøre det i asset injector. Fordelen er at koden er versioneret og det gør det nemmere at udvikle.
+Ulempen er, at når har uploadet kan man kun overskrive ikke slette filer igen.
+https://github.com/odensebibliotekerne/webmaster_local_snow
 
-3. Javascript
+3. Serie: Javascript
 
 Her kommer et eksempel på et modul, som skaber en side på samme måde som DPL React.
 
-4. Modul med php pakker
+4. PDF generering: Modul med php pakker
 
 Da man ikke kan installere moduler med composer, kan man ikke hente pakker til f.eks. PDF eller CSV generering. Det samme er tilfældet for contrib moduler. Det er ikke best practice at inludere moduler på denne måde pga. opdatering af pakkerne.
 
