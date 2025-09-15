@@ -22,9 +22,18 @@ task dev:cli -- drush upwd admin etHeltNytUniktPassword
 docker ps
 ```
 
-I "docker ps" listen vil der være en Varnish docker for DPL CMS, som er den man skal tilgå for at se sitet i en browser.
-Find varnish under Images hedder f.eks. dpl-cms-varnish og tjek porten under PORTS f.eks. 80/tcp, 8443/tcp, 0.0.0.0:32770->8080/tcp, [::]:32770->8080/tcp.
-Sitet kan tilgåes i en browser på f.eks. localhost:32770.
+Url'en / ip adressen til sitet kan fåes på flere måder.
+
+1. Virtual host vha. Dory eller nginx-proxy er beskrevet i den officielle dokumentation
+   https://danskernesdigitalebibliotek.github.io/dpl-docs/DPL-CMS/local-development/#docker-setup
+
+2. Via Docker klient
+   Hvis man bruger Orbstack kan man under DPL-CMS Varnish containeren kunne se IP adresse f.eks. http://localhost:32769/ og en url f.eks. dpl-cms.local
+
+3. Manuelt finde IP adressen
+   I "docker ps" listen vil der være en Varnish docker for DPL CMS, som er den man skal tilgå for at se sitet i en browser.
+   Find varnish under Images hedder f.eks. dpl-cms-varnish og tjek porten under PORTS f.eks. 80/tcp, 8443/tcp, 0.0.0.0:32770->8080/tcp, [::]:32770->8080/tcp.
+   Sitet kan tilgåes i en browser på f.eks. localhost:32770.
 
 Når sitet er klart, skal man indsætte api nøgler til fbi - men ellers burde indstillinger og rettigheder være klart til, at man kan starte med at udvikle.
 
