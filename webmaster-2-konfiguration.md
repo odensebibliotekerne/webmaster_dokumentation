@@ -35,7 +35,7 @@ Hvis man har en række konfigurationer, som danner en samlet funktion - kan det 
 
 ## Anbefalinger
 
-- Lav kun konfigurationsændringer som påvirker DPL-CMS generelle konfigurationsfiler, hvis det er meget nødvendigt. Hvis man gør det, vil man ikke få ændringer i disse konfigurationsfiler i fremtidige releases med + der er ting som kan breake, måske specielt ikke Drupal elementerne som React laget, Go sitet ...
+- Lav kun konfigurationsændringer som påvirker DPL-CMS generelle konfigurationsfiler, hvis det er meget nødvendigt. Hvis man gør det, vil man ikke få ændringer i disse konfigurationsfiler i fremtidige releases med + der er ting som kan breake, måske specielt ikke-Drupal elementerne som React laget, Go sitet ...
 - Navngiv nye konfigurationer, så de ikke får sammenfald med DPL-CMS konfigurationer. Hvis man f.eks. opretter et nyt view kan man med fordel f.eks. give det maskinnavnet BIBLIOTEKSNAVN_personaleoversigt.
 
 # Eksempler
