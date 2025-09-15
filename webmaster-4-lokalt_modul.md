@@ -41,6 +41,8 @@ task dev:cli -- drush deploy
 
 # Eksempler
 
+Eksempler på forskellige typer af lokale moduler. Modulerne er fungerende og inkluderet for at illustrere forskellige udviklingsstrategier og muligheder.
+
 ### 1. Personaleoversigt: Modul med både konfiguration og CSS
 
 Moduler der importerer konfigurationen for et view, en indholdstype, 3 taksonomier, et tekstformat, et billedformat og tilføjer noget CSS.
@@ -55,9 +57,11 @@ Eksemple på et modul, som indlæser JS/CSS istedet for at gøre det i asset inj
 Ulempen er, at når man har uploadet kan man kun overskrive, ikke slette filer igen.
 https://github.com/odensebibliotekerne/webmaster_local_snow
 
-### 3. Serie: Javascript
+### 3. Serie / univers: Javascript
 
-Her kommer et eksempel på et modul, som skaber en side på samme måde som DPL React.
+Et eksempel på et modul, som danner en side på samme måde som DPL React, bare med Svelte istedet for.
+
+https://github.com/odensebibliotekerne/webmaster_local_series
 
 ### 4. PDF generering: Modul med php pakker
 
