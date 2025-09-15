@@ -4,7 +4,7 @@ Man kan bruge [Asset Injector](https://www.drupal.org/project/asset_injector) As
 
 Asset Injector giver mulighed for at tilføje brugerdefineret CSS eller JavaScript til dit Drupal-site uden at skulle ændre i f.eks. tema eller bruge lokale moduler. Det er praktisk, hvis man hurtigt vil tilpasse udseendet eller funktionaliteten på specifikke sider eller site-wide.
 
-Add to Head modulet bruges til at tilføje scripts, styles eller meta-tags direkte til "<head>"-sektionen på sitet.
+Add to Head modulet bruges til at tilføje scripts, styles eller meta-tags direkte til \<head\>-sektionen på sitet.
 
 ## Installation
 
