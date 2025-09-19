@@ -2,9 +2,9 @@
 
 Reload har i DPL-CMS projektet lavet et Docker miljø, som kan bruges til lokal udvikling og indeholder webserver, database etc.
 
-Installation af lokalt udviklingsmiljø kræver installation af en Docker klient f.eks. Docker Desktop eller Orbstack.
+Installation af lokalt udviklingsmiljø kræver installation af en Docker klient f.eks. Docker Desktop https://www.docker.com/products/docker-desktop/ eller Orbstack https://orbstack.dev/.
 Derudeover skal Task https://taskfile.dev/ være installeret.
-Kan afvikles på Linux, Mac og Windows Subsystem for Linux.
+Kan afvikles på Linux, Mac, Windows og Windows Subsystem for Linux.
 
 ```sh
 git clone https://github.com/danskernesdigitalebibliotek/dpl-cms.git
@@ -28,19 +28,21 @@ Url'en / ip adressen til sitet kan fåes på flere måder.
    https://danskernesdigitalebibliotek.github.io/dpl-docs/DPL-CMS/local-development/#docker-setup
 
 2. Via Docker klient
-   Hvis man bruger Orbstack kan man under DPL-CMS Varnish containeren kunne se IP adresse f.eks. http://localhost:32769/ og en url f.eks. dpl-cms.local
+   Hvis man f.eks. bruger Orbstack kan man under DPL-CMS Varnish containeren kunne se IP adresse f.eks. http://localhost:32769/ og en url f.eks. dpl-cms.local
 
 3. Manuelt finde IP adressen
-   I "docker ps" listen vil der være en Varnish docker for DPL CMS, som er den man skal tilgå for at se sitet i en browser.
+   Kommandoen "docker ps" lister kørende docker container og der vil være en Varnish docker for DPL CMS, som er den man skal tilgå for at se sitet i en browser.
    Find varnish under Images hedder f.eks. dpl-cms-varnish og tjek porten under PORTS f.eks. 80/tcp, 8443/tcp, 0.0.0.0:32770->8080/tcp, [::]:32770->8080/tcp.
    Sitet kan tilgåes i en browser på f.eks. localhost:32770.
 
 Når sitet er klart, skal man indsætte api nøgler til fbi - men ellers burde indstillinger og rettigheder være klar til, at man kan starte med at udvikle.
 
-Se desuden den officielle dokumentation for flere detaljer såsom certifikater og virtual host (så man ikke skal lede efter en ip adresse).
+Se desuden den officielle dokumentation for flere detaljer såsom certifikater og virtual host.
 https://danskernesdigitalebibliotek.github.io/dpl-docs/DPL-CMS/local-development/#docker-setup
 
-Der er lavet en masse kommandoer til f.eks. at starte Xdebug, køre drush kommandoer osv. De kan ses i Taskfile.yml i roden af DPL CMS projektet.
+Der er lavet en masse task kommandoer til f.eks. at starte Xdebug, køre drush kommandoer osv. De kan ses i Taskfile.yml i roden af DPL CMS projektet.
+
+Her er nogle af
 
 ```sh
 # kør drush kommando
@@ -52,17 +54,44 @@ task dev:enable-xdebug
 # stop og start site
 task dev:stop
 task dev:start
+# bygger sitet helt forfra
+task dev:reset
 ```
+
+## Udviklingsindstillinger
+
+Slå caching fra på /admin/config/development/settings og sæt eventuelt Twig i debug mode.
 
 ## Xdebug
 
-Ved VS Code og Chrome
+Slå xdebug til med
 
-Dan vscode/launch.json fil
-Start Xdebug i docker projektet: task dev:enable-xdebug
-Tilføj og start f.eks. Xdebug Chrome Extension
-https://chromewebstore.google.com/detail/xdebug-chrome-extension/oiofkammbajfehgpleginfomeppgnglk?utm_source=ext_app_menu
-Start debug i VS Code
+```sh
+task dev:enable-xdebug
+```
+
+Tilføj browser plugin f.eks. Xdebug Helper by JetBrains
+(chrome) https://chromewebstore.google.com/detail/xdebug-helper-by-jetbrain/aoelhdemabeimdhedkidlnbkfhnhgnhm
+
+Ved VS Code, lave en launch.json fil i .vscode mappen eller brug et IDE med Xdebug som PhpStorm
+
+```json
+{
+  "configurations": [
+    {
+      "name": "Listen for Xdebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "pathMappings": {
+        "/app": "${workspaceFolder}"
+      }
+    }
+  ]
+}
+```
+
+Sæt breakpoints og start debugger (ved VScode).
 
 ## Tokens
 
@@ -78,5 +107,3 @@ Man kan ikke logge ind som låner, i det lokale udviklingsmiljø. Hvis man har b
 ## DPL React / DPL Designsystem
 
 Det er muligt, at hente og starte både DPL React og DPL Designsystem, men det er ikke praktisk muligt at implementere ændringer herfra på de lokale sites. Derfor dokumenteres disse dele af tech stacken ikke.
-
-## Udviklingsmuligheder og afklaring
